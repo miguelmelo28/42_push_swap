@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:03:11 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 15:08:47 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	push_swap(char **argv)
 	// if bench was used in cla print it
 	return(0);
 }
-int	pw_check_algo_bench(char *s)
+int	ps_check_algo_bench(char *s)
 {
 	if (!ft_strcmp(s, "--simple"))
 		return (1);

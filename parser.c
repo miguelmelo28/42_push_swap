@@ -6,17 +6,11 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/14 14:14:32 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:09:55 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 15:17:48 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// make into different .c file
-
-void	ps_stackadd_back(t_stack **lst, t_stack *new_node);
-t_stack	*ps_stacknew(int num);
-void	ps_stack_clear(t_stack **head);
-
 
 t_stack	*ps_fill_stack(char **argv)
 {

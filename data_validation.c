@@ -6,13 +6,13 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 09:58:25 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:02:27 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 15:25:21 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	validate_data(char **argv)
+int	ps_validate_data(char **argv)
 {
 	int	i;
 	int	j;
@@ -21,8 +21,12 @@ int	validate_data(char **argv)
 	while (argv[i])
 	{
 		j = 0;
+		if (argv[i][j] == '\0')
+			return (1);
 		if (argv[i][0] == '-' || argv[i][0] == '+')
 			j++;
+		if (argv[i][j] == '\0')
+			return (1);
 		while (argv[i][j])
 		{
 			if (!ft_isdigit((unsigned char)argv[i][j]))
@@ -34,7 +38,7 @@ int	validate_data(char **argv)
 	return (0);
 }
 
-int	duplicate_check(t_stack **head)
+int	ps_duplicate_check(t_stack **head)
 {
 	t_stack	*cur;
 	t_stack	*other;

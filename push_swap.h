@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:02:59 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 15:19:29 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,15 @@ typedef	struct s_stack
 } t_stack;
 
 int		push_swap(int argc, char **argv);
-int		pw_check_algo_bench(char *s);
-t_stack	*pw_fill_stack(char **argv);
-int		validate_data(char **argv);
-int	duplicate_check(t_stack **head);
-void	pw_index_stack(t_stack *head);
+int		ps_check_algo_bench(char *s);
+t_stack	*ps_fill_stack(char **argv);
+int		ps_validate_data(char **argv);
+int		ps_duplicate_check(t_stack **head);
+void	ps_index_stack(t_stack *head);
+void	ps_stackadd_back(t_stack **head, t_stack *new_node);
+t_stack	*ps_stacknew(int num);
+void	ps_stack_clear(t_stack **head);
+void 	ps_stackadd_front(t_stack **head, t_stack *new);
 double	disorder(int *a, int len);
 
 #endif

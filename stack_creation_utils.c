@@ -6,24 +6,24 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 15:09:57 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:10:14 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 15:17:02 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_stackadd_back(t_stack **lst, t_stack *new_node)
+void	ps_stackadd_back(t_stack **head, t_stack *new_node)
 {
 	t_stack	*current;
 
-	if (!lst || !new_node)
+	if (!head || !new_node)
 		return ;
-	if (*lst == NULL)
+	if (*head == NULL)
 	{
-		*lst = new_node;
+		*head = new_node;
 		return ;
 	}
-	current = *lst;
+	current = *head;
 	while (current->next != NULL)
 		current = current->next;
 	current->next = new_node;
@@ -52,4 +52,12 @@ void	ps_stack_clear(t_stack **head)
 		free(*head);
 		*head = tmp;
 	}
+}
+
+void ps_stackadd_front(t_stack **head, t_stack *new)
+{
+	if (!head || !new)
+		return ;
+	new->next = *head;
+	*head = new;
 }
