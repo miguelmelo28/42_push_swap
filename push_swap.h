@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 17:36:04 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/15 17:49:51 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ typedef struct s_ops
 	size_t	rra;
 	size_t	rrb;
 	size_t	rrr;
-	size_t	total;
 } t_ops;
 
 typedef	struct s_stack
