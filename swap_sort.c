@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:06:16 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:46:06 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/15 17:35:35 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "push_swap.h"
 #include "unistd.h"
 
-int sa(t_stack **head, t_ops operations)
+int sa(t_stack **head, t_ops *operations)
 {
 	t_stack	*tmp;
 
@@ -28,7 +28,7 @@ int sa(t_stack **head, t_ops operations)
 	tmp->next = (*head)->next;
 	(*head)->next = tmp;
 	write(1, "sa\n", 3);
-	operations.sa++;
+	operations->sa++;
 	return (1);
 }
 

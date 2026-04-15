@@ -6,7 +6,7 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 17:06:41 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/15 17:18:07 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/15 17:35:45 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	main(int argc, char **argv)
 	printf("=== Stack after fill + index ===\n");
 	print_stack(a);
 	print_operations(operations);
-	sa(&a, operations);
+	sa(&a, &operations);
 	print_stack(a);
 	print_operations(operations);
 	free_stack(&a);
