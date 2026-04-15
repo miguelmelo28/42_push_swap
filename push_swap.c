@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:08:47 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 16:41:57 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ int	main(int argc, char **argv)
 	status[1] = pw_check_algo_bench(argv[2]);
 	if (status[0] != 0 && status[1] != 0)
 	{
-		error = push_swap(argc - 3, argv + 3);
+		error = push_swap(argv + 3);
 	}
 	else if (status[0] != 0)
-		error = push_swap(argc - 2, argv + 2);
-	error = push_swap(argc - 1, argv + 1);
+		error = push_swap(argv + 2);
+	error = push_swap(argv + 1);
 	if (error != 0)
 		ft_putstr_fd("Error\n", 2);
 	return (0);
