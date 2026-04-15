@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/10 16:04:16 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 11:27:01 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 # include "libft.h"
 
-typedef struct s_list
+typedef struct s_ops
 {
 	size_t	sa;
 	size_t	sb;
@@ -28,13 +28,21 @@ typedef struct s_list
 	size_t	rrb;
 	size_t	rrr;
 	size_t	total;
-} operation_list;
+} t_ops;
+
 typedef	struct s_stack
 {
 	int				num;
 	int				index;
 	struct s_stack	*next;
-	struct s_stack	*previous;
-} s_stack;
+} t_stack;
 
+int		push_swap(int argc, char **argv);
+int		pw_check_algo_bench(char *s);
+t_stack	*pw_fill_stack(char **argv);
+int		validate_data(int argc, char **argv);
+int		duplicate_check(int argc, char **argv);
+void	pw_index_stack(t_stack *head);
 double	disorder(int *a, int len);
+
+#endif

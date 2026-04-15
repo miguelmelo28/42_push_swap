@@ -6,33 +6,45 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/10 17:49:49 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 11:03:36 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	main(int argc, char **argv)
 {
 	int	status[2];
+	int	error;
 
+	error = 0;
 	status[0] = 0;
 	status[1] = 0;
 	if (argc < 2)
 		//return error
 	// give codes for bench being used and which algo 
-	status[0] = check_algo_bench(argv[0]);
-	status[1] = check_algo_bench(argv[1]);
+	status[0] = pw_check_algo_bench(argv[1]);
+	status[1] = pw_check_algo_bench(argv[2]);
 	if (status[0] != 0 && status[1] != 0)
 	{
-		push_swap(argv + 3);
+		error = push_swap(argc - 3, argv + 3);
 	}
-	if (status[0] != 0)
-		push_swap(argv + 2);
-	push_swap(argv + 1);
+	else if (status[0] != 0)
+		error = push_swap(argc - 2, argv + 2);
+	error = push_swap(argc - 1, argv + 1);
+	if (error != 0)
+		ft_putstr_fd("Error\n", 2);
 	return (0);
 }
 
-char	**push_swap(int	count, char **argv)
+int	push_swap(int argc, char **argv)
 {
+	t_stack	*a;
+
+	if (validate_data(argc, argv))
+		return (1);
+	a = pw_fill_stack(argv);
+	if (!a && argv[0] != NULL)
+		return (1);
+	pw_index_stack(a);
 	// convert the arguments to integers first (itoa)
 	// store them on the stack in a
 	// calculate the disorder
@@ -40,18 +52,33 @@ char	**push_swap(int	count, char **argv)
 	// if advanced send over to advanced to decide which algorithm should be used
 	// print the operations and the sorted data
 	// if bench was used in cla print it
+	return(0);
 }
-int	check_algo_bench(char *s)
+int	pw_check_algo_bench(char *s)
 {
-	if (strncmp(s, "--simple", ft_strlen(s)))
-		return (1)
-	if (strncmp(s, "--medium", ft_strlen(s)))
+	if (!ft_strcmp(s, "--simple"))
+		return (1);
+	if (!ft_strcmp(s, "--medium"))
 		return (2);
-	if (strncmp(s, "--complex", ft_strlen(s)))
+	if (!ft_strcmp(s, "--complex"))
 		return (3);
-	if (strncmp(s, "--adaptive", ft_strlen(s)))
+	if (!ft_strcmp(s, "--adaptive"))
 		return (4);
-	if (strncmp(s, "--bench", ft_strlen(s)))
+	if (!ft_strcmp(s, "--bench"))
 		return (5);
 	return (0);
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] && s2[i])
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
