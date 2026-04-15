@@ -6,13 +6,13 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/14 14:25:13 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 10:36:28 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 15:20:53 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pw_index_stack(t_stack *head)
+void	ps_index_stack(t_stack *head)
 {
 	t_stack	*cur;
 	t_stack	*other;

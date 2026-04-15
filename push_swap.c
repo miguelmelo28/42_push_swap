@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:35:58 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/15 16:05:09 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,16 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-int	push_swap(int argc, char **argv)
+int	push_swap(char **argv)
 {
 	t_stack	*a;
 
-	if (validate_data(argc, argv))
+	if (validate_data(argv))
 		return (1);
 	a = pw_fill_stack(argv);
 	if (!a && argv[0] != NULL)
+		return (1);
+	if (duplicate_check(&a))
 		return (1);
 	pw_index_stack(a);
 	// convert the arguments to integers first (itoa)
@@ -56,7 +58,7 @@ int	push_swap(int argc, char **argv)
 	// if bench was used in cla print it
 	return(0);
 }
-int	pw_check_algo_bench(char *s)
+int	ps_check_algo_bench(char *s)
 {
 	if (!ft_strcmp(s, "--simple"))
 		return (1);
