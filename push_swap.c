@@ -6,9 +6,11 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:08:47 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 16:03:10 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 int	main(int argc, char **argv)
 {

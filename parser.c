@@ -6,13 +6,19 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/14 14:14:32 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 15:17:48 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 16:02:19 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
 
-t_stack	*ps_fill_stack(char **argv)
+void	pw_stackadd_back(t_stack **lst, t_stack *new_node);
+t_stack	*pw_stacknew(int num);
+void	pw_stack_clear(t_stack **head);
+
+
+t_stack	*pw_fill_stack(char **argv)
 {
 	t_stack	*a;
 	t_stack	*new_node;
