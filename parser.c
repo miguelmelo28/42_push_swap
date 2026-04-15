@@ -6,11 +6,12 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/14 14:14:32 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 11:34:49 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 15:34:22 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
 
 void	pw_stackadd_back(t_stack **lst, t_stack *new_node);
 t_stack	*pw_stacknew(int num);
