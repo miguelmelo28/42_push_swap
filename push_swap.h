@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 17:27:12 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 17:49:58 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,8 @@ t_stack	*ps_stacknew(int num);
 void	ps_stack_clear(t_stack **head);
 void 	ps_stackadd_front(t_stack **head, t_stack *new);
 double	disorder(int *a, int len);
+int	sa(t_stack **head, t_ops *operations);
+int	ss(t_stack **head_a, t_stack **head_b, t_ops operations);
+int	sb(t_stack **head, t_ops operations);
 
 #endif
