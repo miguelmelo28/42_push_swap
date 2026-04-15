@@ -6,11 +6,12 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/14 14:14:32 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 11:34:49 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 14:00:33 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+// make into different .c file
 
 void	pw_stackadd_back(t_stack **lst, t_stack *new_node);
 t_stack	*pw_stacknew(int num);

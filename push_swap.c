@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 11:03:36 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/15 15:03:11 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,16 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-int	push_swap(int argc, char **argv)
+int	push_swap(char **argv)
 {
 	t_stack	*a;
 
-	if (validate_data(argc, argv))
+	if (validate_data(argv))
 		return (1);
 	a = pw_fill_stack(argv);
 	if (!a && argv[0] != NULL)
+		return (1);
+	if (duplicate_check(&a))
 		return (1);
 	pw_index_stack(a);
 	// convert the arguments to integers first (itoa)
