@@ -6,7 +6,7 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/27 14:42:16 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/15 12:38:08 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/03/27 14:50:24 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,10 @@ double	disorder(int *a, int len)
 		j = i;
 		while (++j < len)
 		{
-			total_pairs++;
+			total_pairs += 1;
 			if (a[i] > a[j])
-				mistakes++;
+				mistakes += 1;
 		}
 	}
-	return ((double)mistakes / total_pairs);
+	return (mistakes/total_pairs);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	int numbers[] = {1, 3, 2, 5, 9, 10};
-// 	printf("%f\n", disorder(numbers, 6));
-// }
