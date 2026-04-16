@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/16 10:41:57 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/16 14:46:09 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,8 @@ void	rr(t_stack **head_a, t_stack **head_b, t_ops *p);
 int		sa(t_stack **head, t_ops *operations);
 int		sb(t_stack **head, t_ops operations);
 int		ss(t_stack **head_a, t_stack **head_b, t_ops operations);
+void	rra(t_stack **head, t_ops *p);
+void	rrb(t_stack **head, t_ops *p);
+void	rrr(t_stack **head_a, t_stack **head_b, t_ops *p);
 
 #endif

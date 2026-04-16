@@ -6,7 +6,7 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 17:06:41 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/15 17:35:45 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/16 14:48:14 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	print_stack(t_stack *head)
 
 static void print_operations(t_ops o)
 {
-	printf("sa:%li\nsb:%li\nss:%li\n", o.sa, o.sb, o.ss);
+	printf("sa:%li\nsb:%li\nss:%li\nrra:%li\nrrb:%li\nrrr:%li\n", o.sa, o.sb, o.ss, o.rra, o.rrb, o.rrr);
 }
 static void	free_stack(t_stack **head)
 {
@@ -69,7 +69,7 @@ int	main(int argc, char **argv)
 	printf("=== Stack after fill + index ===\n");
 	print_stack(a);
 	print_operations(operations);
-	sa(&a, &operations);
+	rra(&a, &operations);
 	print_stack(a);
 	print_operations(operations);
 	free_stack(&a);
