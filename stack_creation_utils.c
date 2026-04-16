@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 15:09:57 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 16:21:07 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/16 09:40:57 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,11 @@ void ps_stackadd_front(t_stack **head, t_stack *new)
 	*head = new;
 }
 
-void	ps_stackdelone(t_stack *a)
+t_stack	*ps_stacklast(t_stack *head_local)
 {
-	
+	if (!head)
+		return (NULL);
+	while (head->next)
+		head = head->next;
+	return (head);
 }
