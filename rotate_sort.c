@@ -6,13 +6,12 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:07:52 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/16 09:38:32 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/16 10:47:28 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
-	
+
 static void	ps_rotate(t_stack **head)
 {
 	t_stack	*last;

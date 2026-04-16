@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:06:53 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/15 17:27:05 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/16 10:43:53 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ps_push_b(t_stack **head_a, t_stack **head_b, t_ops *p)
 	ps_stackadd_front(head_b, tmp);
 	p->pb++;
 }
-	
+
 void	ps_push_a(t_stack **head_a, t_stack **head_b, t_ops *p)
 {
 	t_stack	*tmp;
