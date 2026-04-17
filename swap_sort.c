@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:06:16 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/16 10:45:41 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 11:59:49 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	sa(t_stack **head, t_ops *operations)
 	return (1);
 }
 
-int	sb(t_stack **head, t_ops operations)
+int	sb(t_stack **head, t_ops *operations)
 {
 	t_stack	*tmp;
 
@@ -43,11 +43,11 @@ int	sb(t_stack **head, t_ops operations)
 	tmp->next = (*head)->next;
 	(*head)->next = tmp;
 	write(1, "sb\n", 3);
-	operations.sb++;
+	operations->sb++;
 	return (1);
 }
 
-int	ss(t_stack **head_a, t_stack **head_b, t_ops operations)
+int	ss(t_stack **head_a, t_stack **head_b, t_ops *operations)
 {
 	t_stack	*tmp;
 
@@ -62,6 +62,6 @@ int	ss(t_stack **head_a, t_stack **head_b, t_ops operations)
 	tmp->next = (*head_b)->next;
 	(*head_b)->next = tmp;
 	write(1, "ss\n", 3);
-	operations.ss++;
+	operations->ss++;
 	return (1);
 }
