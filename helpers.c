@@ -6,11 +6,13 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 11:24:31 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 13:08:27 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 16:04:04 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "stack.h"
+#include "operations.h"
+#include "libft.h"
 
 int	total_data_size(t_stack *head_local)
 {
