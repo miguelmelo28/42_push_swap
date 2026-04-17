@@ -18,6 +18,7 @@ SRCS = \
 	rev_rotate_sort.c \
 	helpers.c \
 	simple_algo.c \
+	main.c \
 	swap_sort.c
 OBJS = $(SRCS:.c=.o)
 

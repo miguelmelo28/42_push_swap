@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:06:16 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 12:13:16 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 12:28:53 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	sa(t_stack **head, t_ops *ops)
 	if (ops)
 	{
 		ops->sa++;
-		ps_emit_op(ops, "sa");
+		print_ops_or_emit(ops, "sa");
 	}
 	return (1);
 }
@@ -44,7 +44,7 @@ int	sb(t_stack **head, t_ops *ops)
 	if (ops)
 	{
 		ops->sb++;
-		ps_emit_op(ops, "sb");
+		print_ops_or_emit(ops, "sb");
 	}
 	return (1);
 }
@@ -66,7 +66,7 @@ int	ss(t_stack **head_a, t_stack **head_b, t_ops *ops)
 	if (ops)
 	{
 		ops->ss++;
-		ps_emit_op(ops, "ss");
+		print_ops_or_emit(ops, "ss");
 	}
 	return (1);
 }
