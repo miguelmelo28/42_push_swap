@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/16 14:46:09 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/17 11:58:03 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef	struct s_stack
 	struct s_stack	*next;
 } t_stack;
 
-int		push_swap(char **argv);
+int		push_swap(char **argv, int *status);
 int		ps_check_algo_bench(char *s);
 t_stack	*ps_fill_stack(char **argv);
 int		ps_validate_data(char **argv);
@@ -48,13 +48,18 @@ t_stack	*ps_stacknew(int num);
 void	ps_stack_clear(t_stack **head);
 void 	ps_stackadd_front(t_stack **head, t_stack *new);
 t_stack	*ps_stacklast(t_stack *head_local);
+int		total_data_size(t_stack *head_local);
+void	min_extraction(t_stack **head_a, t_ops *ops);
+int		ft_strcmp(const char *s1, const char *s2);
 double	disorder(int *a, int len);
+void	pb(t_stack **head_a, t_stack **head_b, t_ops *p);
+void	pa(t_stack **head_a, t_stack **head_b, t_ops *p);
 void	ra(t_stack **head, t_ops *p);
 void	rb(t_stack **head, t_ops *p);
 void	rr(t_stack **head_a, t_stack **head_b, t_ops *p);
 int		sa(t_stack **head, t_ops *operations);
-int		sb(t_stack **head, t_ops operations);
-int		ss(t_stack **head_a, t_stack **head_b, t_ops operations);
+int		sb(t_stack **head, t_ops *operations);
+int		ss(t_stack **head_a, t_stack **head_b, t_ops *operations);
 void	rra(t_stack **head, t_ops *p);
 void	rrb(t_stack **head, t_ops *p);
 void	rrr(t_stack **head_a, t_stack **head_b, t_ops *p);
