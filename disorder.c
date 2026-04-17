@@ -6,7 +6,7 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/27 14:42:16 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/17 15:59:56 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/17 19:07:24 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ double	disorder(t_stack *head)
 		compare = current->next;
 		while (compare)
 		{
-			total_pairs += 1;
+			total_pairs++;
 			if (current->num > compare->num)
-				mistakes += 1;
+				mistakes++;
 			compare = compare->next;
 		}
 		current = current->next;
