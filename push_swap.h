@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 11:58:03 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 12:14:51 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_ops
 	size_t	rra;
 	size_t	rrb;
 	size_t	rrr;
+	int		bench;
 } t_ops;
 
 typedef	struct s_stack
@@ -51,17 +52,18 @@ t_stack	*ps_stacklast(t_stack *head_local);
 int		total_data_size(t_stack *head_local);
 void	min_extraction(t_stack **head_a, t_ops *ops);
 int		ft_strcmp(const char *s1, const char *s2);
+void	print_ops_or_emit(t_ops *ops, const char *name);
 double	disorder(int *a, int len);
-void	pb(t_stack **head_a, t_stack **head_b, t_ops *p);
-void	pa(t_stack **head_a, t_stack **head_b, t_ops *p);
-void	ra(t_stack **head, t_ops *p);
-void	rb(t_stack **head, t_ops *p);
-void	rr(t_stack **head_a, t_stack **head_b, t_ops *p);
-int		sa(t_stack **head, t_ops *operations);
-int		sb(t_stack **head, t_ops *operations);
-int		ss(t_stack **head_a, t_stack **head_b, t_ops *operations);
-void	rra(t_stack **head, t_ops *p);
-void	rrb(t_stack **head, t_ops *p);
-void	rrr(t_stack **head_a, t_stack **head_b, t_ops *p);
+void	pb(t_stack **head_a, t_stack **head_b, t_ops *ops);
+void	pa(t_stack **head_a, t_stack **head_b, t_ops *ops);
+void	ra(t_stack **head, t_ops *ops);
+void	rb(t_stack **head, t_ops *ops);
+void	rr(t_stack **head_a, t_stack **head_b, t_ops *ops);
+int		sa(t_stack **head, t_ops *ops);
+int		sb(t_stack **head, t_ops *ops);
+int		ss(t_stack **head_a, t_stack **head_b, t_ops *ops);
+void	rra(t_stack **head, t_ops *ops);
+void	rrb(t_stack **head, t_ops *ops);
+void	rrr(t_stack **head_a, t_stack **head_b, t_ops *ops);
 
 #endif

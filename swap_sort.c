@@ -6,18 +6,14 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:06:16 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 11:59:49 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 12:13:16 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-	// size_t	sa;
-	// size_t	sb;
-	// size_t	ss;
 
 #include "push_swap.h"
 #include "unistd.h"
 
-int	sa(t_stack **head, t_ops *operations)
+int	sa(t_stack **head, t_ops *ops)
 {
 	t_stack	*tmp;
 
@@ -27,12 +23,15 @@ int	sa(t_stack **head, t_ops *operations)
 	*head = tmp->next;
 	tmp->next = (*head)->next;
 	(*head)->next = tmp;
-	write(1, "sa\n", 3);
-	operations->sa++;
+	if (ops)
+	{
+		ops->sa++;
+		ps_emit_op(ops, "sa");
+	}
 	return (1);
 }
 
-int	sb(t_stack **head, t_ops *operations)
+int	sb(t_stack **head, t_ops *ops)
 {
 	t_stack	*tmp;
 
@@ -42,12 +41,15 @@ int	sb(t_stack **head, t_ops *operations)
 	*head = tmp->next;
 	tmp->next = (*head)->next;
 	(*head)->next = tmp;
-	write(1, "sb\n", 3);
-	operations->sb++;
+	if (ops)
+	{
+		ops->sb++;
+		ps_emit_op(ops, "sb");
+	}
 	return (1);
 }
 
-int	ss(t_stack **head_a, t_stack **head_b, t_ops *operations)
+int	ss(t_stack **head_a, t_stack **head_b, t_ops *ops)
 {
 	t_stack	*tmp;
 
@@ -61,7 +63,10 @@ int	ss(t_stack **head_a, t_stack **head_b, t_ops *operations)
 	*head_b = tmp->next;
 	tmp->next = (*head_b)->next;
 	(*head_b)->next = tmp;
-	write(1, "ss\n", 3);
-	operations->ss++;
+	if (ops)
+	{
+		ops->ss++;
+		ps_emit_op(ops, "ss");
+	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:08:10 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/16 14:57:31 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/17 12:14:28 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,24 +37,33 @@ static void	ps_rrotate(t_stack **head)
 	tmp->next = NULL;
 }
 
-void	rra(t_stack **head, t_ops *p)
+void	rra(t_stack **head, t_ops *ops)
 {
 	ps_rrotate(head);
-	if (p)
-		p->rra++;
+	if (ops)
+	{
+		ops->rra++;
+		ps_emit_op(ops, "rra");
+	}
 }
 
-void	rrb(t_stack **head, t_ops *p)
+void	rrb(t_stack **head, t_ops *ops)
 {
 	ps_rrotate(head);
-	if (p)
-		p->rrb++;
+	if (ops)
+	{
+		ops->rrb++;
+		ps_emit_op(ops, "rrb");
+	}
 }
 
-void	rrr(t_stack **head_a, t_stack **head_b, t_ops *p)
+void	rrr(t_stack **head_a, t_stack **head_b, t_ops *ops)
 {
 	ps_rrotate(head_a);
 	ps_rrotate(head_b);
-	if (p)
-		p->rrr++;
+	if (ops)
+	{
+		ops->rrr++;
+		ps_emit_op(ops, "rrr");
+	}
 }
