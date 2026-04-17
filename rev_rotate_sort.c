@@ -6,13 +6,13 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:08:10 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 12:28:38 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 13:10:49 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_stack *ps_stack_second_last(t_stack *head)
+static t_stack	*ps_stack_second_last(t_stack *head)
 {
 	if (!head)
 		return (NULL);

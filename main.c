@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 12:26:05 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 12:35:37 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 13:10:11 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	ps_is_algo_flag(int status);
 static int	ps_invalid_flag_combo(int s0, int s1);
 static int	ps_run_with_flags(char **argv, int *status);
-static int	ps_check_algo_bench(char *s); 
+static int	ps_check_algo_bench(char *s);
 
 int	main(int argc, char **argv)
 {
@@ -40,8 +40,9 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 2);
 	return (0);
 }
-static int ps_check_algo_bench(char *s) 
-{ 
+
+static int	ps_check_algo_bench(char *s)
+{
 	if (!ft_strcmp((const char *)s, "--simple"))
 		return (1);
 	if (!ft_strcmp((const char *)s, "--medium"))
@@ -54,6 +55,7 @@ static int ps_check_algo_bench(char *s)
 		return (5);
 	return (0);
 }
+
 static int	ps_is_algo_flag(int status)
 {
 	return (status >= 1 && status <= 4);
@@ -67,6 +69,7 @@ static int	ps_invalid_flag_combo(int s0, int s1)
 		return (1);
 	return (0);
 }
+
 static int	ps_run_with_flags(char **argv, int *status)
 {
 	if (status[0] != 0 && status[1] != 0)

@@ -6,14 +6,16 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/16 10:45:51 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 11:31:48 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 13:05:51 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	upper_stack(t_stack **head_a, t_stack **head_b, t_ops *ops, int rotations);
-static void	lower_stack(t_stack **head_a, t_stack **head_b, t_ops *ops, int rotations);
+static void	upper_stack(t_stack **head_a, t_stack **head_b,
+				t_ops *ops, int rotations);
+static void	lower_stack(t_stack **head_a, t_stack **head_b,
+				t_ops *ops, int rotations);
 static void	push_to_sort(t_stack **head_a, t_stack **head_b, t_ops *ops);
 static int	find_target_pos(t_stack *head, int target);
 
@@ -39,7 +41,8 @@ void	min_extraction(t_stack **head_a, t_ops *ops)
 	push_to_sort(head_a, &head_b, ops);
 }
 
-static void	upper_stack(t_stack **head_a, t_stack **head_b, t_ops *ops, int rotations)
+static void	upper_stack(t_stack **head_a, t_stack **head_b,
+				t_ops *ops, int rotations)
 {
 	while (rotations > 0)
 	{
@@ -49,7 +52,8 @@ static void	upper_stack(t_stack **head_a, t_stack **head_b, t_ops *ops, int rota
 	pb(head_a, head_b, ops);
 }
 
-static void	lower_stack(t_stack **head_a, t_stack **head_b, t_ops *ops, int rotations)
+static void	lower_stack(t_stack **head_a, t_stack **head_b,
+				t_ops *ops, int rotations)
 {
 	while (rotations > 0)
 	{

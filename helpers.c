@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 11:24:31 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 12:08:28 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 13:08:27 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	total_data_size(t_stack *head_local)
 	}
 	return (i);
 }
+
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	int	i;
@@ -37,6 +38,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+
 void	print_ops_or_emit(t_ops *ops, const char *name)
 {
 	if (!ops || ops->bench)
