@@ -6,13 +6,13 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:06:53 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/16 10:43:53 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 10:45:56 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_push_b(t_stack **head_a, t_stack **head_b, t_ops *p)
+void	pb(t_stack **head_a, t_stack **head_b, t_ops *p)
 {
 	t_stack	*tmp;
 
@@ -25,7 +25,7 @@ void	ps_push_b(t_stack **head_a, t_stack **head_b, t_ops *p)
 	p->pb++;
 }
 
-void	ps_push_a(t_stack **head_a, t_stack **head_b, t_ops *p)
+void	pa(t_stack **head_a, t_stack **head_b, t_ops *p)
 {
 	t_stack	*tmp;
 
