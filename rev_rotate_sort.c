@@ -6,11 +6,12 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:08:10 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 13:10:49 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 15:52:57 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "helpers.h"
 
 static t_stack	*ps_stack_second_last(t_stack *head)
 {

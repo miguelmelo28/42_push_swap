@@ -6,7 +6,7 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 17:06:41 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/16 14:48:14 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/17 15:53:37 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include "push_swap.h"
 #include "operations.h"
+#include "helpers.h"
 
 static void	print_stack(t_stack *head)
 {
@@ -65,6 +66,7 @@ int	main(int argc, char **argv)
 		printf("Stack creation failed\n");
 		return (1);
 	}
+	printf("Disorder: %f\n", disorder(a));
 	ps_index_stack(a);
 	printf("=== Stack after fill + index ===\n");
 	print_stack(a);
