@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 13:06:53 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 12:09:24 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 12:34:49 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	pb(t_stack **head_a, t_stack **head_b, t_ops *p)
 	if (p)
 	{
 		p->pb++;
-		ps_emit_op(p, "pb");
+		print_ops_or_emit(p, "pb");
 	}
 }
 
@@ -42,6 +42,6 @@ void	pa(t_stack **head_a, t_stack **head_b, t_ops *p)
 	if (p)
 	{
 		p->pa++;
-		ps_emit_op(p, "pa");
+		print_ops_or_emit(p, "pa");
 	}
 }

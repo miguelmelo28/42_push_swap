@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 12:26:05 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 12:26:06 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 12:35:37 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	ps_is_algo_flag(int status);
 static int	ps_invalid_flag_combo(int s0, int s1);
 static int	ps_run_with_flags(char **argv, int *status);
-static int ps_check_algo_bench(char *s); 
+static int	ps_check_algo_bench(char *s); 
 
 int	main(int argc, char **argv)
 {
@@ -51,7 +51,8 @@ static int ps_check_algo_bench(char *s)
 	if (!ft_strcmp((const char *)s, "--adaptive"))
 		return (4);
 	if (!ft_strcmp((const char *)s, "--bench"))
-	return (5); return (0);
+		return (5);
+	return (0);
 }
 static int	ps_is_algo_flag(int status)
 {

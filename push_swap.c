@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 12:26:16 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 12:34:25 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	push_swap(char **argv, int *status)
 	ps_index_stack(a);
 	if (status[0] == 1 || status[1] == 1 || status[0] == 0)
 		min_extraction(&a, &ops);
-	if (ops.bench)
-		ps_print_bench(&ops);
+	// if (ops.bench)
+	// 	ps_print_bench(&ops);
 	ps_stack_clear(&a);
 	return (0);
 }

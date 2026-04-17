@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 12:28:04 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 12:35:49 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ typedef	struct s_stack
 } t_stack;
 
 int		push_swap(char **argv, int *status);
-int		ps_check_algo_bench(char *s);
 t_stack	*ps_fill_stack(char **argv);
 int		ps_validate_data(char **argv);
 int		ps_duplicate_check(t_stack **head);
