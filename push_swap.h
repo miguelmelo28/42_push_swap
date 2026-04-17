@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 15:45:28 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/17 16:56:14 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include "libft.h"
 # include "stack.h"
 # include "operations.h"
+# include "helpers.h"
 # include <stdlib.h>
 
 int		push_swap(char **argv, int *status);
