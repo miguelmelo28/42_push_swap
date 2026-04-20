@@ -6,12 +6,13 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 12:58:11 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 13:03:41 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 14:10:25 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STACK_H
 # define STACK_H
+# include "push_swap.h"
 
 typedef struct s_stack
 {

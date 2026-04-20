@@ -6,12 +6,13 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 17:11:17 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/17 13:04:11 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/17 14:10:53 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef OPERATIONS_H
 # define OPERATIONS_H
+# include "push_swap.h"
 
 typedef struct s_ops
 {
