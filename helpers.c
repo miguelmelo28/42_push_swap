@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 11:24:31 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 16:04:04 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/20 13:14:55 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 
 void	print_ops_or_emit(t_ops *ops, const char *name)
 {
-	if (!ops || ops->bench)
+	if (!ops)
 		return ;
 	ft_putstr_fd((char *)name, 1);
 	ft_putchar_fd('\n', 1);

@@ -18,7 +18,6 @@ SRCS = \
 	rev_rotate_sort.c \
 	helpers.c \
 	simple_algo.c \
-	main.c \
 	swap_sort.c \
 	main.c \
 	complex_algo.c \

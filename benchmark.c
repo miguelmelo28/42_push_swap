@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:49:13 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 12:19:27 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/20 12:57:45 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ static void	print_disorder(double disorder)
 	disorder *= 100;
 	ft_putnbr_fd((int)disorder, 2);
 	ft_putchar_fd('.', 2);
-	disorder *= 100;
-	ft_putnbr_fd((int)disorder % 100, 2);
+	disorder *= 10;
+	ft_putnbr_fd((int)disorder % 10, 2);
+	disorder *= 10;
+	ft_putnbr_fd((int)disorder % 10, 2);
 	ft_putstr_fd("%\n", 2);
 }
 

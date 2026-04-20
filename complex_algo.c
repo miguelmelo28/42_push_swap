@@ -6,7 +6,7 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 16:02:46 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/17 17:24:50 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/20 13:01:55 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 int	n_digits(t_stack *head)
 {
 	int	digits;
-	int	data_ammount;
+	int	max_index;
 
 	digits = 0;
-	data_ammount = total_data_size(head);
-	while (data_ammount)
+	max_index = total_data_size(head) - 1;
+	while (max_index)
 	{
-		data_ammount /= 2;
+		max_index /= 2;
 		digits++;
 	}
 	return (digits);

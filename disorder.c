@@ -6,13 +6,13 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/03/27 14:42:16 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/17 19:07:24 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/20 12:50:42 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-double	disorder(t_stack *head)
+double	ps_disorder(t_stack *head)
 {
 	int		mistakes;
 	int		total_pairs;
