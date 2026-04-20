@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:49:13 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 12:57:45 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/20 17:56:38 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,17 +69,17 @@ static void print_strategy(int strategy, int complexity)
 	ft_putstr_fd("[bench] strategy: ", 2);
 	if (strategy == 1)
 		ft_putstr_fd("Simple / ", 2);
-	if (strategy == 2)
+	else if (strategy == 2)
 		ft_putstr_fd("Medium / ", 2);
-	if (strategy == 3)
+	else if (strategy == 3)
 		ft_putstr_fd("Complex / ", 2);
-	if (strategy == 4)
+	else if (strategy == 4)
 		ft_putstr_fd("Adaptive / ", 2);
 	if (complexity == 1)
 		ft_putstr_fd("O(n^2)\n", 2);
-	if (complexity == 2)
+	else if (complexity == 2)
 		ft_putstr_fd("O(n sqrt(n))\n", 2);
-	if (complexity == 3)
+	else if (complexity == 3)
 		ft_putstr_fd("O(n log(n))\n", 2);
 }
 
