@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:49:13 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 18:57:40 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/20 11:38:29 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,15 +62,29 @@ static void	print_total_ops(t_ops ops)
 	ft_putstr_fd("\n", 2);
 }
 
-static void print_strategy(int strategy)
+static void print_strategy(int strategy, int complexity)
 {
-	
+	ft_putstr_fd("[bench] strategy: ", 2);
+	if (strategy == 1)
+		ft_putstr_fd("Simple / ", 2);
+	if (strategy == 2)
+		ft_putstr_fd("Medium / ", 2);
+	if (strategy == 3)
+		ft_putstr_fd("Complex / ", 2);
+	if (strategy == 4)
+		ft_putstr_fd("Adaptive / ", 2);
+	if (complexity == 1)
+		ft_putstr_fd("O(n^2)\n", 2);
+	if (complexity == 2)
+		ft_putstr_fd("O(n sqrt(n))\n", 2);
+	if (complexity == 3)
+		ft_putstr_fd("O(n log(n))\n", 2);
 }
 
-void	print_benchmark(t_ops ops, double disorder, int strategy)
+void	print_benchmark(t_ops ops, double disorder, int strategy, int complexity)
 {
 	print_disorder(disorder);
-	print_strategy(strategy);
+	print_strategy(strategy, complexity);
 	print_total_ops(ops);
 	print_operations(ops);
 }
