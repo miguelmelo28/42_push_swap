@@ -6,7 +6,7 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 17:06:41 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/16 14:48:14 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/17 17:01:33 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #include <stdlib.h>
 #include "push_swap.h"
 #include "operations.h"
+#include "helpers.h"
+
+void	radix(t_stack **head_a, t_ops *ops);
 
 static void	print_stack(t_stack *head)
 {
@@ -30,7 +33,7 @@ static void	print_stack(t_stack *head)
 
 static void print_operations(t_ops o)
 {
-	printf("sa:%li\nsb:%li\nss:%li\nrra:%li\nrrb:%li\nrrr:%li\n", o.sa, o.sb, o.ss, o.rra, o.rrb, o.rrr);
+	printf("sa:%li\nsb:%li\nss:%li\nrra:%li\nrrb:%li\nrrr:%li\npa:%li\npb:%li\nra:%li\nrb:%li\nrr:%li\n", o.sa, o.sb, o.ss, o.rra, o.rrb, o.rrr, o.pa, o.pb, o.ra, o.rb, o.rr);
 }
 static void	free_stack(t_stack **head)
 {
@@ -65,13 +68,15 @@ int	main(int argc, char **argv)
 		printf("Stack creation failed\n");
 		return (1);
 	}
+	printf("Disorder: %f\n", disorder(a));
 	ps_index_stack(a);
 	printf("=== Stack after fill + index ===\n");
 	print_stack(a);
 	print_operations(operations);
-	rra(&a, &operations);
+	radix(&a, &operations);
 	print_stack(a);
 	print_operations(operations);
+	printf("Disorder: %f\n", disorder(a));
 	free_stack(&a);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 17:11:17 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/17 14:10:53 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/20 10:49:53 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define OPERATIONS_H
 # include "push_swap.h"
 
+typedef unsigned long size_t;
 typedef struct s_ops
 {
 	size_t	sa;
