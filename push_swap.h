@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 10:50:18 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/20 12:19:38 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 
 int		push_swap(char **argv, int *status);
 void	min_extraction(t_stack **head_a, t_ops *ops);
-double	disorder(t_stack *head);
+double	ps_disorder(t_stack *head);
+void	ps_print_benchmark(t_ops ops, double disorder, int strat, int comp);
 
 #endif
