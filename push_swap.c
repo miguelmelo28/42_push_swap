@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 13:30:05 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/20 13:34:01 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	push_swap(char **argv, int *status)
 	t_stack	*a;
 	t_ops	ops;
 	int		complexity;
+	int		strategy;
 	double	disorder;
 
 	a = NULL;
