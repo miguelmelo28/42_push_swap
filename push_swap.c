@@ -6,11 +6,13 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 12:21:57 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/20 12:26:13 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder);
 
 int	push_swap(char **argv, int *status)
 {
