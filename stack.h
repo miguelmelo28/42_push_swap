@@ -6,12 +6,14 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 12:58:11 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 12:48:53 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/20 13:19:35 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #ifndef STACK_H
 # define STACK_H
+# include "stack.h"
 
 typedef struct s_stack
 {
