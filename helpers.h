@@ -6,13 +6,12 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 13:00:37 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 10:49:27 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/20 12:43:04 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HELPERS_H
 # define HELPERS_H
-# include "push_swap.h"
 # include "stack.h"
 # include "operations.h"
 

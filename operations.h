@@ -6,13 +6,13 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 17:11:17 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/20 10:49:53 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/20 12:42:59 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef OPERATIONS_H
 # define OPERATIONS_H
-# include "push_swap.h"
+# include "stack.h"
 
 typedef unsigned long size_t;
 typedef struct s_ops
