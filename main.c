@@ -6,13 +6,13 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 12:26:05 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/17 13:10:11 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/20 11:59:24 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	ps_is_algo_flag(int status);
+static void	ps_status_swap(int *status);
 static int	ps_invalid_flag_combo(int s0, int s1);
 static int	ps_run_with_flags(char **argv, int *status);
 static int	ps_check_algo_bench(char *s);
@@ -35,6 +35,7 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 2);
 		return (1);
 	}
+	ps_status_swap(status);
 	error = ps_run_with_flags(argv, status);
 	if (error != 0)
 		ft_putstr_fd("Error\n", 2);
@@ -56,14 +57,21 @@ static int	ps_check_algo_bench(char *s)
 	return (0);
 }
 
-static int	ps_is_algo_flag(int status)
+static void	ps_status_swap(int *status)
 {
-	return (status >= 1 && status <= 4);
+	int tmp;
+	
+	if (status[0] == 5 || (status[1] >= 1 && status[1] <= 4))
+	{
+		tmp = status[0];
+		status[0] = status[1];
+		status[1] = tmp;
+	}
 }
 
 static int	ps_invalid_flag_combo(int s0, int s1)
 {
-	if (ps_is_algo_flag(s0) && ps_is_algo_flag(s1))
+	if ((s0 >= 1 && s0 <= 4) && (s1 >= 1 && s1 <= 4))
 		return (1);
 	if (s0 == 5 && s1 == 5)
 		return (1);
