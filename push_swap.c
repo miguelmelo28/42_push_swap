@@ -6,23 +6,21 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 13:14:01 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/20 13:30:05 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "push_swap.h"
 
-static int	run_selected_strategy(t_stack **a, t_ops *ops, int *status,
-				double *disorder);
-static int	ps_is_sorted(t_stack *a);
-static int	adaptive_sort(t_stack **a, t_ops *ops, double *disorder);
+static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder);
 
 int	push_swap(char **argv, int *status)
 {
 	t_stack	*a;
 	t_ops	ops;
+	int		complexity;
 	double	disorder;
-	int		strategy;
 
 	a = NULL;
 	disorder = 0.0;
@@ -41,65 +39,34 @@ int	push_swap(char **argv, int *status)
 		return (1);
 	}
 	ps_index_stack(a);
-	if (ps_is_sorted(a))
-	{
-		ps_stack_clear(&a);
-		return (0);
-	}
-	if (ops.bench)
-		disorder = disorder(a);
-	strategy = run_selected_strategy(&a, &ops, status, &disorder);
-	if (ops.bench)
-		print_benchmark(ops, disorder, strategy);
+	disorder = ps_disorder(a);
+	complexity = run_algorithm(&a, &ops, status[0], disorder);
+	if (status[1] == 5)
+		ps_print_benchmark(ops, disorder, status[0], complexity);
 	ps_stack_clear(&a);
 	return (0);
 }
 
-static int	run_selected_strategy(t_stack **a, t_ops *ops, int *status,
-	double *disorder)
+static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder)
 {
-	if (status[0] == 1 || status[1] == 1)
-	{
-		min_extraction(a, ops);
-		return (1);
-	}
-	if (status[0] == 2 || status[1] == 2)
-	{
-		range_sort(a, ops);
-		return (2);
-	}
-	if (status[0] == 3 || status[1] == 3)
-	{
-		radix_sort(a, ops);
-		return (3);
-	}
-	return (adaptive_sort(a, ops, disorder));
-}
+	int complexity;
 
-static int	ps_is_sorted(t_stack *a)
-{
-	while (a && a->next)
+	if (algo == 4)
 	{
-		if (a->index > a->next->index)
-			return (0);
-		a = a->next;
+		if (disorder < 0.2)
+			complexity = 1;
+		else if (disorder < 0.5)
+			complexity = 2;
+		else
+			complexity = 3;
 	}
-	return (1);
-}
-
-static int	adaptive_sort(t_stack **a, t_ops *ops, double *disorder)
-{
-	*disorder = compute_disorder(*a);
-	if (*disorder < 0.2)
-	{
+	else
+		complexity = algo;
+	if (complexity == 1)
 		min_extraction(a, ops);
-		return (1);
-	}
-	if (*disorder < 0.5)
-	{
-		range_sort(a, ops);
-		return (2);
-	}
-	radix_sort(a, ops);
-	return (3);
+	// else if (complexity == 2)
+	// 	...(a, ops);
+	else if (complexity == 3)
+		radix(a, ops);
+	return (complexity);
 }

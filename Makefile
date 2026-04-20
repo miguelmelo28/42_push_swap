@@ -18,8 +18,10 @@ SRCS = \
 	rev_rotate_sort.c \
 	helpers.c \
 	simple_algo.c \
+	swap_sort.c \
 	main.c \
-	swap_sort.c
+	complex_algo.c \
+	benchmark.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
