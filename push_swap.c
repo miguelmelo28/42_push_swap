@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 13:34:01 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/21 11:20:30 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder)
 	}
 	else
 		complexity = algo;
+	if (disorder == 0)
+		return (complexity);
 	if (complexity == 1)
 		min_extraction(a, ops);
 	// else if (complexity == 2)
