@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 12:26:05 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 12:56:08 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/21 12:55:30 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,6 @@ static void	ps_status_swap(int *status)
 		status[0] = status[1];
 		status[1] = tmp;
 	}
-	if (status[0] == 0)
-		status[0] = 4;
 }
 
 static int	ps_invalid_flag_combo(int s0, int s1)
@@ -84,7 +82,7 @@ static int	ps_run_with_flags(char **argv, int *status)
 {
 	if (status[0] != 0 && status[1] != 0)
 		return (push_swap(argv + 3, status));
-	if (status[0] != 0)
+	if (status[0] != 0 || status[1] != 0)
 		return (push_swap(argv + 2, status));
 	return (push_swap(argv + 1, status));
 }

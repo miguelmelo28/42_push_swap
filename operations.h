@@ -6,7 +6,7 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 17:11:17 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/20 13:27:39 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/21 12:57:16 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ typedef struct s_ops
 	size_t	rra;
 	size_t	rrb;
 	size_t	rrr;
-	int		bench;
 }	t_ops;
 void	pb(t_stack **head_a, t_stack **head_b, t_ops *ops);
 void	pa(t_stack **head_a, t_stack **head_b, t_ops *ops);

@@ -6,13 +6,14 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/21 11:24:41 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/21 12:58:37 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder);
+// static void	print_stack(t_stack *head);
 
 int	push_swap(char **argv, int *status)
 {
@@ -26,8 +27,6 @@ int	push_swap(char **argv, int *status)
 	disorder = 0.0;
 	strategy = 0;
 	ft_bzero(&ops, sizeof(t_ops));
-	if (status[0] == 5 || status[1] == 5)
-		ops.bench = 1;
 	if (ps_validate_data(argv))
 		return (1);
 	a = ps_fill_stack(argv);
@@ -40,6 +39,8 @@ int	push_swap(char **argv, int *status)
 	}
 	ps_index_stack(a);
 	disorder = ps_disorder(a);
+	if (status[0] == 0)
+		status[0] = 4;
 	complexity = run_algorithm(&a, &ops, status[0], disorder);
 	if (status[1] == 5)
 		ps_print_benchmark(ops, disorder, status[0], complexity);
@@ -72,3 +73,16 @@ static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder)
 		radix(a, ops);
 	return (complexity);
 }
+// #include <stdio.h>
+// static void	print_stack(t_stack *head)
+// {
+// 	int	pos;
+
+// 	pos = 0;
+// 	while (head)
+// 	{
+// 		printf("node[%d] -> num=%d, index=%d\n", pos, head->num, head->index);
+// 		head = head->next;
+// 		pos++;
+// 	}
+// }
