@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:49:13 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 17:56:38 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/21 16:39:32 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,8 @@ static void print_strategy(int strategy, int complexity)
 		ft_putstr_fd("O(n sqrt(n))\n", 2);
 	else if (complexity == 3)
 		ft_putstr_fd("O(n log(n))\n", 2);
+	else if (complexity == 4)
+		ft_putstr_fd("O(n)\n", 2);
 }
 
 void	ps_print_benchmark(t_ops ops, double disorder, int strat, int comp)

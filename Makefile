@@ -23,7 +23,8 @@ SRCS = \
 	complex_algo.c \
 	medium_algo.c \
 	medium_algo_helper.c \
-	benchmark.c
+	benchmark.c \
+	low_disorder_algo.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
