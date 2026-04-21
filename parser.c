@@ -6,11 +6,13 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/14 14:14:32 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/16 10:43:37 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/21 10:33:06 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// make sure to only take in up to INT_MIN / INT_MAX!
 
 t_stack	*ps_fill_stack(char **argv)
 {

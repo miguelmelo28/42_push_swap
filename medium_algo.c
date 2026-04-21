@@ -6,12 +6,17 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/16 10:48:16 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 12:56:11 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/21 10:57:07 by stehoffm      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+static int	get_stack_size(t_stack *head);
+static int	get_range_size(int size);
+static void	push_range_to_b(t_stack **head_a, t_stack **head_b,
+	t_ops *ops, int range_size);
+static void	move_max_to_top(t_stack **head_b, t_ops *ops);
+static int	get_max_pos(t_stack *head);
 void	range_sort(t_stack **head_a, t_ops *ops)
 {
 	t_stack	*head_b;

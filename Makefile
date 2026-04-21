@@ -21,6 +21,7 @@ SRCS = \
 	swap_sort.c \
 	main.c \
 	complex_algo.c \
+	medium_algo.c \
 	benchmark.c
 OBJS = $(SRCS:.c=.o)
 
