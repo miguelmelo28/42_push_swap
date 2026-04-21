@@ -1,7 +1,7 @@
 NAME = push_swap
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 LIBFT_DIR = libft
 LIBFT_A = $(LIBFT_DIR)/libft.a
@@ -22,6 +22,7 @@ SRCS = \
 	main.c \
 	complex_algo.c \
 	medium_algo.c \
+	medium_algo_helper.c \
 	benchmark.c
 OBJS = $(SRCS:.c=.o)
 
