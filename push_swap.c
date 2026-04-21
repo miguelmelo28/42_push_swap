@@ -6,10 +6,9 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/21 11:20:30 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/21 11:24:41 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -67,8 +66,8 @@ static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder)
 		return (complexity);
 	if (complexity == 1)
 		min_extraction(a, ops);
-	// else if (complexity == 2)
-	// 	...(a, ops);
+	else if (complexity == 2)
+	 	range_sort(a, ops);
 	else if (complexity == 3)
 		radix(a, ops);
 	return (complexity);
