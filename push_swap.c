@@ -6,16 +6,15 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 16:29:48 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/22 14:56:01 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/22 15:06:56 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder);
-static int adaptive(t_stack *a);
-void	push_swap_run(t_stack **a, t_ops *ops, int *status);
-
+static int	adaptive(t_stack *a);
+void		push_swap_run(t_stack **a, t_ops *ops, int *status);
 
 int	push_swap(char **argv, int *status)
 {
@@ -55,7 +54,7 @@ void	push_swap_run(t_stack **a, t_ops *ops, int *status)
 
 static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder)
 {
-	int complexity;
+	int	complexity;
 
 	if (algo == 4)
 		complexity = adaptive(*a);
@@ -66,17 +65,18 @@ static int	run_algorithm(t_stack **a, t_ops *ops, int algo, double disorder)
 	if (complexity == 1)
 		min_extraction(a, ops);
 	else if (complexity == 2)
-	 	range_sort(a, ops);
+		range_sort(a, ops);
 	else if (complexity == 3)
 		radix(a, ops);
 	else if (complexity == 4)
 		bad_sort(a, ops);
 	return (complexity);
 }
-static int adaptive(t_stack *a)
+
+static int	adaptive(t_stack *a)
 {
-	int size;
-	int complexity;
+	int	size;
+	int	complexity;
 
 	size = total_data_size(a);
 	if (total_data_size(a) <= 3)
@@ -87,7 +87,7 @@ static int adaptive(t_stack *a)
 		complexity = 2;
 	else
 		complexity = 3;
-	return complexity;
+	return (complexity);
 }
 
 // #include <stdio.h>

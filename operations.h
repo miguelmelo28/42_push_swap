@@ -6,15 +6,15 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/15 17:11:17 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/21 12:57:16 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/22 15:05:05 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef OPERATIONS_H
 # define OPERATIONS_H
 # include "stack.h"
+# include <stddef.h>
 
-typedef unsigned long size_t;
 typedef struct s_ops
 {
 	size_t	sa;

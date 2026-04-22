@@ -1,7 +1,7 @@
-for size in $(seq 1 12); do
-    actual=$((2 ** size))
-    for disorder in 0 10 19 40 75 100; do
-		for algorithm in simple medium complex adaptive; do
+for size in 100 1000 2000 5000 10000; do
+    actual=$size
+    for disorder in 10 19 40 50 75 100; do
+		for algorithm in medium complex; do
 			args=$(python3 gen.py $actual $disorder)
 			echo "Size: $actual, Disorder: $disorder%"
 			result=$(./../push_swap --$algorithm --bench $args | ./checker_linux $args)

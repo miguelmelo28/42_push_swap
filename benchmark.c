@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:49:13 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/21 16:39:32 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/22 15:02:29 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,13 @@ static void	print_total_ops(t_ops ops)
 	int	total_ops;
 
 	total_ops = ops.sa + ops.sb + ops.ss + ops.pa + ops.pb + ops.ra + ops.rb
-	+ ops.rr + ops.rra + ops.rrb + ops. rrr;
+		+ ops.rr + ops.rra + ops.rrb + ops. rrr;
 	ft_putstr_fd("[bench] total_ops: ", 2);
 	ft_putnbr_fd(total_ops, 2);
 	ft_putstr_fd("\n", 2);
 }
 
-static void print_strategy(int strategy, int complexity)
+static void	print_strategy(int strategy, int complexity)
 {
 	ft_putstr_fd("[bench] strategy: ", 2);
 	if (strategy == 1)

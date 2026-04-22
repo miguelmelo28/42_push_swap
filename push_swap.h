@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/10 10:26:23 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/21 16:40:29 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/22 15:07:24 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	range_sort(t_stack **head_a, t_ops *ops);
 void	bad_sort(t_stack **head, t_ops *ops);
 void	radix(t_stack **head_a, t_ops *ops);
 void	push_range_to_b(t_stack **head_a, t_stack **head_b,
-	t_ops *ops, int range_size);
+			t_ops *ops, int range_size);
 void	move_max_to_top(t_stack **head_b, t_ops *ops);
 int		get_max_pos(t_stack *head);
 int		get_range_size(int size);

@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/21 11:38:11 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/21 13:25:15 by stehoffm      ########   odam.nl         */
+/*   Updated: 2026/04/22 15:03:09 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	move_max_to_top(t_stack **head_b, t_ops *ops)
 		}
 	}
 }
+
 int	get_max_pos(t_stack *head)
 {
 	int	max;
@@ -82,6 +83,7 @@ int	get_max_pos(t_stack *head)
 	}
 	return (pos);
 }
+
 int	get_range_size(int size)
 {
 	int	num;

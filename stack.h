@@ -6,10 +6,9 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 12:58:11 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/20 13:19:35 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/22 15:07:44 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef STACK_H
 # define STACK_H
