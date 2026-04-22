@@ -6,7 +6,7 @@
 /*   By: stehoffm <stehoffm@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/17 12:26:05 by stehoffm      #+#    #+#                 */
-/*   Updated: 2026/04/21 12:55:30 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/22 15:33:13 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ static int	ps_check_algo_bench(char *s)
 
 static void	ps_status_swap(int *status)
 {
-	int tmp;
-	
+	int	tmp;
+
 	if (status[0] == 5 || (status[1] >= 1 && status[1] <= 4))
 	{
 		tmp = status[0];

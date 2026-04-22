@@ -6,15 +6,15 @@
 /*   By: mmelo <mmelo@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/04/21 13:17:17 by mmelo         #+#    #+#                 */
-/*   Updated: 2026/04/21 16:05:38 by mmelo         ########   odam.nl         */
+/*   Updated: 2026/04/22 15:32:46 by mmelo         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int find_wrong_rank(t_stack *head)
+int	find_wrong_rank(t_stack *head)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (head)
@@ -29,9 +29,9 @@ int find_wrong_rank(t_stack *head)
 
 void	rotate_rank(t_stack **head, t_ops *ops, int rank)
 {
-	int	index;
+	int		index;
 	t_stack	*current;
-	int	size;
+	int		size;
 
 	size = total_data_size(*head);
 	index = 0;
@@ -50,6 +50,7 @@ void	rotate_rank(t_stack **head, t_ops *ops, int rank)
 		while (index--)
 			ra(head, ops);
 }
+
 void	fix_rank(t_stack **head, t_ops *ops, int rank)
 {
 	rotate_rank(head, ops, rank);
@@ -63,9 +64,9 @@ void	fix_rank(t_stack **head, t_ops *ops, int rank)
 	}
 }
 
-void bad_sort(t_stack **head, t_ops *ops)
+void	bad_sort(t_stack **head, t_ops *ops)
 {
-	int rank;
+	int	rank;
 
 	rotate_rank(head, ops, 0);
 	while (ps_disorder(*head))
